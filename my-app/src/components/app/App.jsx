@@ -1,5 +1,7 @@
 import useInputValidation from "../../hook/useInputValidate.js";
 
+const MyButton = ({children}) => <button className='mt-3 btn btn-success'>{children}</button>
+
 const User = () => {
   const firstname = useInputValidation("")
   const lastname = useInputValidation("")
@@ -22,7 +24,9 @@ const User = () => {
                 value={lastname.value}
                 onChange={lastname.onChange}/>
           </div>
-          <button className='mt-3 btn btn-success'>Send data</button>
+            <MyButton>
+                send data
+            </MyButton>
         </div>
       </div>
   )
